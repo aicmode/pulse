@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PULSE — アンダーグラウンドレイブ</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- デモバナー -->
+  <div class="demo-banner" role="alert">
+    ⚠️ これはポートフォリオ用の架空サイトです。チケット購入・お問い合わせ等は機能しません。
+  </div>
+
+  <!-- ==============================
+       NAVIGATION
+  ============================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">PULSE</a>
+      <ul class="nav-links">
+        <li><a href="#events">イベント</a></li>
+        <li><a href="#lineup">ラインアップ</a></li>
+        <li><a href="#gallery">ギャラリー</a></li>
+        <li><a href="#contact">コンタクト</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- モバイルメニュー -->
+    <div class="nav-mobile" id="navMobile">
+      <a href="#events" class="nav-mobile-link">イベント</a>
+      <a href="#lineup" class="nav-mobile-link">ラインアップ</a>
+      <a href="#gallery" class="nav-mobile-link">ギャラリー</a>
+      <a href="#contact" class="nav-mobile-link">コンタクト</a>
+    </div>
+  </nav>
+
+
+  <!-- ==============================
+       HERO
+  ============================== -->
+  <section class="hero" id="home">
+    <!-- 背景のグリッド線 -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <!-- グロー -->
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <span class="dot"></span> Brooklyn, NYC · May 31, 2026
+      </p>
+      <h1 class="hero-title">
+        FEEL THE<br /><span class="highlight">PULSE</span>
+      </h1>
+      <p class="hero-sub">
+        Tech House never sleeps.<br />
+        Experience the underground USA nightlife.
+      </p>
+      <div class="hero-actions">
+        <a href="#events" class="btn btn-primary">チケット購入</a>
+        <a href="#lineup" class="btn btn-ghost">ラインアップを見る</a>
+      </div>
+    </div>
+
+    <!-- スクロールインジケーター -->
+    <div class="scroll-hint" aria-hidden="true">
+      <span class="scroll-hint-line"></span>
+      <span class="scroll-hint-text">スクロール</span>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       EVENTS
+  ============================== -->
+  <section class="section" id="events">
+    <div class="container">
+      <p class="section-label">近日開催イベント</p>
+      <h2 class="section-title">次のイベント</h2>
+
+      <div class="events-grid">
+
+        <article class="event-card event-card--featured">
+          <div class="event-card-tag">注目</div>
+          <div class="event-card-body">
+            <div class="event-date-block">
+              <span class="event-month">5月</span>
+              <span class="event-day">31</span>
+            </div>
+            <div class="event-info">
+              <h3 class="event-name">PULSE VOL.07</h3>
+              <p class="event-venue">Warehouse 93, Brooklyn, New York</p>
+              <p class="event-time">23:00 — 06:00</p>
+              <div class="event-tags">
+                <span class="tag">Techno</span>
+                <span class="tag">Industrial</span>
+                <span class="tag">Rave</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary event-btn">チケット購入 — ¥3,000</a>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-body">
+            <div class="event-date-block">
+              <span class="event-month">6月</span>
+              <span class="event-day">14</span>
+            </div>
+            <div class="event-info">
+              <h3 class="event-name">DEEP CURRENT</h3>
+              <p class="event-venue">La Station, Paris, France</p>
+              <p class="event-time">22:00 — 05:00</p>
+              <div class="event-tags">
+                <span class="tag">Deep House</span>
+                <span class="tag">Minimal</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-ghost event-btn">詳細 →</a>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-body">
+            <div class="event-date-block">
+              <span class="event-month">7月</span>
+              <span class="event-day">05</span>
+            </div>
+            <div class="event-info">
+              <h3 class="event-name">SIGNAL LOSS</h3>
+              <p class="event-venue">The Cause, London, UK</p>
+              <p class="event-time">24:00 — 07:00</p>
+              <div class="event-tags">
+                <span class="tag">Acid</span>
+                <span class="tag">EBM</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-ghost event-btn">詳細 →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       DJ LINEUP
+  ============================== -->
+  <section class="section section-alt" id="lineup">
+    <div class="container">
+      <p class="section-label">PULSE VOL.07</p>
+      <h2 class="section-title">DJ Lineup</h2>
+      <p class="section-desc">6 artists. One night. No rewind.</p>
+
+      <div class="lineup-grid">
+
+        <!-- KAI ROSEN — Headliner -->
+        <article class="dj-card dj-card--headliner">
+          <div class="event-card-tag">HEADLINER</div>
+          <div class="dj-avatar dj-avatar--1">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="40" cy="28" r="16" fill="#b44fff" opacity="0.2"/>
+              <circle cx="40" cy="28" r="10" fill="#b44fff" opacity="0.55"/>
+              <path d="M14 68c0-14.4 11.6-26 26-26s26 11.6 26 26" stroke="#b44fff" stroke-width="2.5" opacity="0.55"/>
+            </svg>
+          </div>
+          <div class="dj-info">
+            <span class="dj-role">03:00</span>
+            <h3 class="dj-name">KAI ROSEN</h3>
+            <p class="dj-origin">Brooklyn, USA</p>
+            <p class="dj-genre">Tech House / Industrial</p>
+          </div>
+        </article>
+
+        <!-- ALEX NOVA -->
+        <article class="dj-card">
+          <div class="dj-avatar dj-avatar--2">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="40" cy="28" r="14" fill="#b44fff" opacity="0.1"/>
+              <circle cx="40" cy="28" r="9" fill="#b44fff" opacity="0.3"/>
+              <path d="M16 68c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#b44fff" stroke-width="2" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="dj-info">
+            <span class="dj-role">01:00</span>
+            <h3 class="dj-name">ALEX NOVA</h3>
+            <p class="dj-origin">Los Angeles, USA</p>
+            <p class="dj-genre">Minimal / Dark Electro</p>
+          </div>
+        </article>
+
+        <!-- JAX VELOR -->
+        <article class="dj-card">
+          <div class="dj-avatar dj-avatar--3">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="40" cy="28" r="14" fill="#b44fff" opacity="0.1"/>
+              <circle cx="40" cy="28" r="9" fill="#b44fff" opacity="0.3"/>
+              <path d="M16 68c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#b44fff" stroke-width="2" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="dj-info">
+            <span class="dj-role">02:00</span>
+            <h3 class="dj-name">JAX VELOR</h3>
+            <p class="dj-origin">Miami, USA</p>
+            <p class="dj-genre">Techno / Acid</p>
+          </div>
+        </article>
+
+        <!-- RYDER WAVE -->
+        <article class="dj-card">
+          <div class="dj-avatar dj-avatar--4">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="40" cy="28" r="14" fill="#b44fff" opacity="0.1"/>
+              <circle cx="40" cy="28" r="9" fill="#b44fff" opacity="0.3"/>
+              <path d="M16 68c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#b44fff" stroke-width="2" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="dj-info">
+            <span class="dj-role">04:30</span>
+            <h3 class="dj-name">RYDER WAVE</h3>
+            <p class="dj-origin">Chicago, USA</p>
+            <p class="dj-genre">Deep House / Groove</p>
+          </div>
+        </article>
+
+        <!-- LUNA VEIL — Opening -->
+        <article class="dj-card">
+          <div class="dj-avatar dj-avatar--5">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="40" cy="28" r="14" fill="#b44fff" opacity="0.1"/>
+              <circle cx="40" cy="28" r="9" fill="#b44fff" opacity="0.3"/>
+              <path d="M16 68c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#b44fff" stroke-width="2" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="dj-info">
+            <div class="dj-role-line">
+              <span class="dj-role">23:00</span>
+              <span class="dj-slot dj-slot--opening">OPENING</span>
+            </div>
+            <h3 class="dj-name">LUNA VEIL</h3>
+            <p class="dj-origin">Las Vegas, USA</p>
+            <p class="dj-genre">Melodic Techno</p>
+          </div>
+        </article>
+
+        <!-- NATE VOID — Closing -->
+        <article class="dj-card">
+          <div class="dj-avatar dj-avatar--6">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="40" cy="28" r="14" fill="#b44fff" opacity="0.1"/>
+              <circle cx="40" cy="28" r="9" fill="#b44fff" opacity="0.3"/>
+              <path d="M16 68c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#b44fff" stroke-width="2" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="dj-info">
+            <div class="dj-role-line">
+              <span class="dj-role">06:00</span>
+              <span class="dj-slot dj-slot--closing">CLOSING</span>
+            </div>
+            <h3 class="dj-name">NATE VOID</h3>
+            <p class="dj-origin">Detroit, USA</p>
+            <p class="dj-genre">Underground / Industrial</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       GALLERY
+  ============================== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <p class="section-label">過去のイベント</p>
+      <h2 class="section-title">ギャラリー</h2>
+
+      <div class="gallery-grid">
+
+        <!-- 1. MAIN STAGE — top-left (768×512 of 1536×1024) -->
+        <div class="gallery-item gallery-item--wide">
+          <div class="gallery-placeholder gp-1 gallery-has-modal"
+               role="button" tabindex="0"
+               data-modal-src="images/pulse-gallery-collage.jpg"
+               data-modal-bg-size="200% 200%"
+               data-modal-bg-pos="0% 0%"
+               data-modal-aspect="3/2"
+               data-modal-alt="MAIN STAGE"
+               data-modal-variant="cinematic"
+               aria-label="MAIN STAGE画像を拡大表示">
+            <span class="gallery-label">MAIN STAGE</span>
+            <span class="gallery-expand" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 1h4v4M5 13H1V9M13 1L8 6M1 13l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- 2. FLOOR — top-right (768×512) -->
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp-2 gallery-has-modal gallery-has-modal--immersive"
+               role="button" tabindex="0"
+               data-modal-src="images/pulse-gallery-collage.jpg"
+               data-modal-bg-size="200% 200%"
+               data-modal-bg-pos="100% 0%"
+               data-modal-aspect="3/2"
+               data-modal-alt="FLOOR"
+               data-modal-variant="immersive"
+               aria-label="FLOOR画像を拡大表示">
+            <span class="gallery-label">FLOOR</span>
+            <span class="gallery-expand" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 1h4v4M5 13H1V9M13 1L8 6M1 13l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- 3. DJ BOOTH — bottom-left (512×512) -->
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp-3 gallery-has-modal"
+               role="button" tabindex="0"
+               data-modal-src="images/pulse-gallery-collage.jpg"
+               data-modal-bg-size="300% 200%"
+               data-modal-bg-pos="0% 100%"
+               data-modal-aspect="1/1"
+               data-modal-alt="DJ BOOTH"
+               data-modal-variant="closeup"
+               aria-label="DJ BOOTH画像を拡大表示">
+            <span class="gallery-label">DJ BOOTH</span>
+            <span class="gallery-expand" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 1h4v4M5 13H1V9M13 1L8 6M1 13l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- 4. LIGHT SHOW — bottom-center (512×512) -->
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp-4 gallery-has-modal"
+               role="button" tabindex="0"
+               data-modal-src="images/pulse-gallery-collage.jpg"
+               data-modal-bg-size="300% 200%"
+               data-modal-bg-pos="50% 100%"
+               data-modal-aspect="1/1"
+               data-modal-alt="LIGHT SHOW"
+               data-modal-variant="laser"
+               aria-label="LIGHT SHOW画像を拡大表示">
+            <span class="gallery-label">LIGHT SHOW</span>
+            <span class="gallery-expand" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 1h4v4M5 13H1V9M13 1L8 6M1 13l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- 5. CROWD ENERGY — bottom-right (512×512) -->
+        <div class="gallery-item gallery-item--wide">
+          <div class="gallery-placeholder gp-5 gallery-has-modal"
+               role="button" tabindex="0"
+               data-modal-src="images/pulse-gallery-collage.jpg"
+               data-modal-bg-size="300% 200%"
+               data-modal-bg-pos="100% 100%"
+               data-modal-aspect="1/1"
+               data-modal-alt="CROWD ENERGY"
+               data-modal-variant="energy"
+               aria-label="CROWD ENERGY画像を拡大表示">
+            <span class="gallery-label">CROWD ENERGY</span>
+            <span class="gallery-expand" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 1h4v4M5 13H1V9M13 1L8 6M1 13l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       CONTACT
+  ============================== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <p class="section-label">お問い合わせ</p>
+      <h2 class="section-title">コンタクト</h2>
+      <p class="section-desc">チケットのお問い合わせ、ブッキング、プレス — 下記よりご連絡ください。</p>
+
+      <div class="contact-wrap">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">お名前</label>
+              <input type="text" id="name" name="name" placeholder="お名前を入力" />
+            </div>
+            <div class="form-group">
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">件名</label>
+            <select id="subject" name="subject">
+              <option value="">トピックを選択</option>
+              <option value="ticket">チケット問い合わせ</option>
+              <option value="booking">DJブッキング</option>
+              <option value="press">プレス / メディア</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">メッセージ</label>
+            <textarea id="message" name="message" rows="5" placeholder="ご用件をお書きください..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">送信する</button>
+          <p class="form-notice" id="formNotice"></p>
+        </form>
+
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <span class="contact-info-label">メール</span>
+            <span class="contact-info-value">info@pulse-rave.jp</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-label">所在地</span>
+            <span class="contact-info-value">東京都、日本</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-label">フォロー</span>
+            <div class="social-links">
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">SoundCloud</a>
+              <a href="#" class="social-link">RA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-logo">PULSE</p>
+        <p class="footer-copy">© 2025 PULSE Underground. All rights reserved.</p>
+        <p class="footer-credit">ポートフォリオ用サンプルサイト</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==============================
+       GALLERY MODAL
+  ============================== -->
+  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="ギャラリー画像">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <figure class="modal-container">
+      <button class="modal-close" id="modalClose" aria-label="閉じる">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-crop" id="modalCrop" role="img" aria-label=""></div>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
