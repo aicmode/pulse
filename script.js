@@ -45,7 +45,7 @@ navMobile.querySelectorAll('.nav-mobile-link').forEach(link => {
    3. FADE-IN ANIMATION (Intersection Observer)
 ────────────────────────────────────── */
 const fadeTargets = document.querySelectorAll(
-  '.event-card, .dj-card, .gallery-item, .section-label, .section-title'
+  '.event-card, .dj-card, .ticket-card, .venue-panel, .notice-card, .gallery-item, .section-label, .section-title, .section-desc'
 );
 
 // クラス付与
@@ -95,12 +95,12 @@ if (contactForm) {
     formNotice.style.color = 'var(--clr-accent)';
 
     const btn = contactForm.querySelector('button[type="submit"]');
-    btn.textContent = '送信中…';
+    btn.textContent = 'Sending...';
     btn.disabled = true;
 
     setTimeout(() => {
       formNotice.textContent = '✓ メッセージを送信しました！近日中にご連絡いたします。';
-      btn.textContent = '送信する';
+      btn.textContent = 'Send Message';
       btn.disabled = false;
       contactForm.reset();
     }, 1200);
@@ -138,7 +138,7 @@ const galleryModal  = document.getElementById('galleryModal');
 const modalOverlay  = document.getElementById('modalOverlay');
 const modalCloseBtn = document.getElementById('modalClose');
 const modalCrop     = document.getElementById('modalCrop');
-const modalContainer = galleryModal.querySelector('.modal-container');
+const modalContainer = galleryModal?.querySelector('.modal-container');
 
 const MODAL_VARIANTS = ['cinematic', 'immersive', 'closeup', 'laser', 'energy'];
 
@@ -179,23 +179,25 @@ function closeGalleryModal() {
 }
 
 // data-modal-* 属性を持つカードをすべて自動登録（将来の追加にも対応）
-document.querySelectorAll('.gallery-has-modal').forEach(card => {
-  const handler = () => openGalleryModal(
-    card.dataset.modalSrc      || '',
-    card.dataset.modalBgSize   || 'cover',
-    card.dataset.modalBgPos    || 'center',
-    card.dataset.modalAspect   || '16/9',
-    card.dataset.modalAlt      || '',
-    card.dataset.modalVariant  || ''
-  );
-  card.addEventListener('click', handler);
-  card.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
+if (galleryModal && modalOverlay && modalCloseBtn && modalCrop && modalContainer) {
+  document.querySelectorAll('.gallery-has-modal').forEach(card => {
+    const handler = () => openGalleryModal(
+      card.dataset.modalSrc      || '',
+      card.dataset.modalBgSize   || 'cover',
+      card.dataset.modalBgPos    || 'center',
+      card.dataset.modalAspect   || '16/9',
+      card.dataset.modalAlt      || '',
+      card.dataset.modalVariant  || ''
+    );
+    card.addEventListener('click', handler);
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
+    });
   });
-});
 
-modalOverlay.addEventListener('click',  closeGalleryModal);
-modalCloseBtn.addEventListener('click', closeGalleryModal);
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && galleryModal.classList.contains('open')) closeGalleryModal();
-});
+  modalOverlay.addEventListener('click',  closeGalleryModal);
+  modalCloseBtn.addEventListener('click', closeGalleryModal);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && galleryModal.classList.contains('open')) closeGalleryModal();
+  });
+}
